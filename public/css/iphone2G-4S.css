@@ -1,0 +1,33 @@
+@media (orientation : portrait) {
+    .site-width {
+        /*width: 20em; /* 320px / 16px */
+        width: 100%;
+    }
+
+    header[role="branding"] {
+        margin-top: 0.625em; /* 10px / 16px */
+    }
+
+    footer {
+        height: 6.25em; /* 100px / 16px */
+    }
+}
+
+@media (orientation : landscape) {
+    html, body {
+        font-size: 12px;
+    }
+    .site-width {
+        /*width: 20em; /* 480px / 16px */
+        width: 100%;
+    }
+
+    header[role="branding"] {
+        margin-top: 0.4166666667em; /* 5px / 16px */
+    }
+
+    footer {
+        height: 5em; /* 60px / 12px */
+    }
+
+}

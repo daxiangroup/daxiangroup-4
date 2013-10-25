@@ -1,0 +1,178 @@
+/*************[ Debugging ]*****************************************************/
+/*
+.row-fluid { outline: solid 1px #c00; }
+.row-fluid [class*="span"] { outline: solid 1px #0c0; }
+*/
+
+/*************[ Interface ]*****************************************************/
+html, body {
+    height: 100%;
+    background: url(../img/bg_main.png);
+    font: 300 16px Ubuntu;
+    line-height: 1.125em; /* 18px / 16px */
+    color: #ccb697;
+}
+
+.site-width {
+    width: 61.25em; /* 980px / 16px */
+    height: 100%;
+    margin: 0 auto;
+}
+.center {
+    text-align: center;
+}
+
+h2 {
+    font-family: "Nova Square";
+    color: #ff9900;
+    margin: 0 0 0.8333333333em 0;
+}
+
+header[role="branding"] {
+    position: relative;
+    width: 100%;
+    height: 5em; /* 80px / 16px */
+    margin-top: 1.25em; /* 20px / 16px */
+    background-image: url(../img/tb_daxiangroup.png), url(../img/bg_titlebar.png);
+    background-position: center top;
+}
+    header[role="branding"] > div {
+        position: relative;
+    }
+    header[role="branding"] ul {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+    }
+    header[role="branding"] .left, header[role="branding"] .right {
+        font: 300 1.125em Ubuntu; /* 18px / 16px */
+        color: #945d0d;
+        padding-top: 1.7777777778em; /* 32px / 18px */
+    }
+    header[role="branding"] .left {
+        float: left;
+    }
+    header[role="branding"] .right {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    header[role="branding"] .middle {
+        width: 15em; /* 240px / 16px */
+        height: 100%;
+        margin: 0 auto;
+    }
+    header[role="branding"] li {
+        float: left;
+        margin-right: 1.6666666667em; /* 30px / 18px */
+        color: #fff;
+    }
+        header[role="branding"] li:last-of-type {
+            margin-right: 0px;
+        }
+    header[role="branding"] a:link, header[role="branding"] a:visited, header[role="branding"] a:active {
+        color: #945d0d;
+        text-decoration: none;
+    }
+    header[role="branding"] a:hover {
+        color: #333;
+    }
+
+div[role="main"] {
+    padding: 1.25em 0; /* 20px / 16px */
+    height: auto;
+}
+
+footer {
+    width: 100%;
+    height: 12.5em; /* 200px / 16px */
+    background: url(../img/bg_bottom.png);
+    border-top: solid 1px #945d0d;
+}
+
+/*************[ Styling - About ]***********************************************/
+.about-content {
+    height: auto;
+    margin-bottom: 1.875em; /* 30px / 16 */
+}
+    .about-content > div {
+        display: inline-block;
+    }
+
+    .about-content p {
+        font-size: 0.875em; /* 14px / 16px */
+    }
+    .about-content .left {
+        width: 22%;
+    }
+    .about-content .middle {
+        width: 50%;
+    }
+    .about-content .right {
+        width: 22%;
+    }
+    /*
+        .about-content .right:after {
+            content: "";
+            float: left;
+            margin-left: 16px;
+            margin-top: 100px;
+            border-top: dotted 4px #fff;
+            width: 300px;
+            height: 4px;
+        }
+    */
+
+.about-content:last-of-type {
+    margin-bottom: 0px;
+}
+
+/*************[ Styling - Output ]**********************************************/
+.output {
+    position: relative;
+    width: 55.75em; /* 892px / 16px */
+    min-height: 20.25em; /* 324px / 16px */
+    margin: 0 auto;
+    overflow: auto;
+    text-align: center;
+}
+    .output .hover {
+        height: 19em;
+        margin-top: 0.625em; /* 10px / 16px */
+        margin-bottom: 1.25em; /* 20px / 16px */
+        background-color: none;
+        border: solid 1px transparent;
+    }
+    .output:hover .hover {
+        position: relative;
+        background-color: #382b24;
+        border: solid 1px #945d0d;
+    }
+    .output .img {
+        position: absolute;
+        width: 55.75em; /* 892px / 16px */
+        height: 20.25em; /* 324 / 16px */
+        top: 0em;
+        left: 0em;
+    }
+        .output .img.vividvoice {
+            background-image: url(../img/output/output_vividvoice.png);
+        }
+
+    .output h2 {
+        display: inline-block;
+    }
+    .output a:link, .output a:visited, .output a:active {
+        color: #945d0d;
+        text-decoration: none;
+    }
+    .output a:hover {
+        color: #fff;
+    }
+
+/*************[ Styling - Contact ]*********************************************/
+
+#frm-website:focus::-webkit-input-placeholder {
+  transition: opacity 0.5s 0.5s ease; 
+  opacity: 0;
+}
