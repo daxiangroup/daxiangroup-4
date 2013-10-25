@@ -27,7 +27,7 @@
         <![endif]-->
         <header role="branding">
             <div class="site-width container">
-                <div class="left">
+                <div class="left hidden-phone">
                     <ul>
                         <li>
                             @if (isset($active_page) && $active_page == 'output')
@@ -59,7 +59,7 @@
                     </a>
                 </div>
 
-                <div class="right">
+                <div class="right hidden-phone">
                     <ul>
                         <li>
                             @if (isset($active_page) && $active_page == 'contact')
