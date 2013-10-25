@@ -1,17 +1,21 @@
 @extends('layouts.master')
 
 @section('content')
+    <div class="hero">
+        <div class="site-width">
+            Get in touch with us, we don't bite.
+        </div>
+    </div>
+
     {{ Form::open(array('route'=>'contact.submit', 'class'=>'contact-frm')) }}
     {{ Form::token() }}
 
-    <div class="row-fluid">
+    <div class="row-fluid site-width">
         <div class="span8">
 
             <div class="row-fluid">
                 <div class="span12">
-                    <h2>Contact</h2>
-                    
-                    <p>We'd like to hear from you. Whether you’re a prospective client, just sending a greeting or simply a fan of our work, say hi! Don't hesitate to drop us a line, we'll get back to you. Promise.</p>
+                    <p>We'd like to hear from you. Whether you’re a prospective client, just sending a greeting or simply a fan of our work... say hi! Don't hesitate to reach out to us, we'll get back to you. Promise.</p>
                 </div>
             </div>
 

@@ -7,20 +7,41 @@
 /*************[ Interface ]*****************************************************/
 html, body {
     height: 100%;
-    background: url(../img/bg_main.png);
-    font: 300 16px Ubuntu;
+    background: #505050;
+    background: #EAEBEC;
+    font: 100 16px Exo;
     line-height: 1.125em; /* 18px / 16px */
+    line-height: 20px; /* 18px / 16px */
     color: #ccb697;
+    color: #333;
+    margin: 0px;
+    padding: 0px;    
 }
 
 .site-width {
+    position: relative;
     width: 61.25em; /* 980px / 16px */
+    width: 980px; /* 980px / 16px */
     height: 100%;
     margin: 0 auto;
 }
 .center {
     text-align: center;
 }
+.hero {
+    position: relative;
+    background: #fff;
+    font: 100 2.625em Exo; /* 42px / 16px */
+    color: #333;
+    padding: 0.2857142857em 0; /* 12px / 42px */
+    margin-bottom: 0.2380952381em; /* 10px / 42px */
+}
+    body.contact .hero,
+    body.about .hero
+    {
+        background: #ff9900;
+        color: #fff;
+    }
 
 h2 {
     font-family: "Nova Square";
@@ -29,57 +50,72 @@ h2 {
 }
 
 header[role="branding"] {
-    position: relative;
-    width: 100%;
-    height: 5em; /* 80px / 16px */
-    margin-top: 1.25em; /* 20px / 16px */
-    background-image: url(../img/tb_daxiangroup.png), url(../img/bg_titlebar.png);
-    background-position: center top;
+    outline: solid 1px #c00;
+        border-bottom: solid 0.5em #6d6e71; /* 10px / 16px */
+        padding-bottom: 0.5em; /* 8px / 16px */
+        background: #505050;
 }
-    header[role="branding"] > div {
-        position: relative;
-    }
-    header[role="branding"] ul {
-        padding: 0px;
-        margin: 0px;
-        list-style: none;
-    }
-    header[role="branding"] .left, header[role="branding"] .right {
-        font: 300 1.125em Ubuntu; /* 18px / 16px */
-        color: #945d0d;
-        padding-top: 1.7777777778em; /* 32px / 18px */
-    }
     header[role="branding"] .left {
-        float: left;
+        position: absolute;
+        top: 0px;
+        left: 0px;
     }
+
+    header[role="branding"] .middle {
+        font: 300 40px "Nova Square";
+        width: 6.25em; /* 250px / 40px */
+        height: 1.05em; /* 42px / 40px */
+        overflow: hidden;
+        margin: 0.25em auto 0 auto;
+    }
+        header[role="branding"] .middle .words {
+            display: inline-block;
+            position: relative;
+            vertical-align: top;
+            top: -0.15em; /* 6px / 40px */
+            text-shadow: 0px 0px 1px #945d0d; /* 2px / 40px */
+            text-shadow: 0px 1px 1px #FF9900; /* 2px / 40px */
+            color: #141414;
+            color: #ddd;
+            color: #fff;
+        }
+        header[role="branding"] .middle .divider {
+            width: 0.075em; /* 3px / 40px */
+            height: 100%;
+            background: black;
+            background: #FF9900;
+            display: inline-block;
+            margin: 0 0.3em; /* 12px / 40px */
+            /*
+            -moz-box-shadow:    0px 0px 0.025em 0.025em #945d0d; /* 1px / 40px */
+            /*-webkit-box-shadow: 0px 0px 0.025em 0.025em #945d0d; /* 1px / 40px */
+            /*box-shadow:         0px 0px 0.025em 0.025em #945d0d; /* 1px / 40px */
+        }
+
     header[role="branding"] .right {
         position: absolute;
         top: 0px;
         right: 0px;
     }
-    header[role="branding"] .middle {
-        width: 15em; /* 240px / 16px */
-        height: 100%;
-        margin: 0 auto;
+
+    header[role="branding"] ul {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
     }
-    header[role="branding"] li {
-        float: left;
-        margin-right: 1.6666666667em; /* 30px / 18px */
-        color: #fff;
-    }
-        header[role="branding"] li:last-of-type {
-            margin-right: 0px;
+        header[role="branding"] li {
+            float: left;
+            margin-right: 1.6666666667em; /* 30px / 18px */
+            color: #fff;
         }
-    header[role="branding"] a:link, header[role="branding"] a:visited, header[role="branding"] a:active {
-        color: #945d0d;
-        text-decoration: none;
-    }
-    header[role="branding"] a:hover {
-        color: #333;
-    }
+            header[role="branding"] li:last-of-type {
+                margin-right: 0px;
+            }
+
 
 div[role="main"] {
-    padding: 1.25em 0; /* 20px / 16px */
+    /*padding: 1.25em 0; /* 20px / 16px */
+    position: relative;
     height: auto;
 }
 

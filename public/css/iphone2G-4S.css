@@ -1,11 +1,26 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    color: #000;
+}
+
+.site-width {
+    margin: 0 auto;
+}
+
+.hero {
+    font-size: 30px;
+    padding: 0.2857142857em 0; /* 12px / 42px */
+    padding: 5px 0; /* 12px / 42px */
+}
+
 @media (orientation : portrait) {
     .site-width {
-        /*width: 20em; /* 320px / 16px */
-        width: 100%;
+        width: 96%;
     }
 
     header[role="branding"] {
-        margin-top: 0.625em; /* 10px / 16px */
     }
 
     footer {
@@ -14,12 +29,9 @@
 }
 
 @media (orientation : landscape) {
-    html, body {
-        font-size: 12px;
-    }
     .site-width {
-        /*width: 20em; /* 480px / 16px */
-        width: 100%;
+        width: 98%;
+        margin: 0 auto;
     }
 
     header[role="branding"] {

@@ -1,6 +1,12 @@
 @extends('layouts.master')
 
 @section('content')
+    <div class="hero">
+        <div class="site-width">
+            So here's the lowdown.
+        </div>
+    </div>
+
     <div class="about-content">
         <div class="left">
         </div>

@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Daxian Group - Flatter</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,14 +18,15 @@
         {{ HTML::style('css/dg.css') }}
         {{ HTML::style('css/Ubuntu.font.css') }}
         {{ HTML::style('css/NovaSquare.font.css') }}
+        {{ HTML::style('css/Exo.font.css') }}
         {{ HTML::script('js/vendor/modernizr-2.6.2.min.js') }}
     </head>
-    <body>
+    <body class="{{ Request::path() }}">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
         <header role="branding">
-            <div class="site-width">
+            <div class="site-width container">
                 <div class="left">
                     <ul>
                         <li>
@@ -48,13 +49,15 @@
                             @else
                             <a href="{{ URL::route('about') }}">About</a>
                             @endif
-                        <li>
+                        </li>
                     </ul>
                 </div>
 
-                <a href="{{ URL::route('home') }}">
-                    <div class="middle"></div>
-                </a>
+                <div class="middle">
+                    <a href="{{ URL::route('home') }}">
+                        <div class="words">daxian</div><div class="divider"></div><div class="words">group</div>
+                    </a>
+                </div>
 
                 <div class="right">
                     <ul>
@@ -70,7 +73,7 @@
             </div>
         </header>
 
-        <div role="main" class="site-width">
+        <div role="main">
             @yield('content')
         </div>
 
