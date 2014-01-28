@@ -16,9 +16,9 @@
         {{ HTML::style('css/bootstrap-responsive.min.css') }}
         {{ HTML::style('css/main.css') }}
         {{ HTML::style('css/dg.css') }}
-        {{ HTML::style('css/Ubuntu.font.css') }}
         {{ HTML::style('css/NovaSquare.font.css') }}
         {{ HTML::style('css/Exo.font.css') }}
+        {{ HTML::style('css/fontello.css') }}
         {{ HTML::script('js/vendor/modernizr-2.6.2.min.js') }}
     </head>
     <body class="{{ Request::path() }}">
@@ -29,26 +29,14 @@
             <div class="site-width container">
                 <div class="left hidden-phone">
                     <ul>
-                        <li>
-                            @if (isset($active_page) && $active_page == 'output')
-                            Output
-                            @else
+                        <li{{ (isset($active_page) && $active_page == 'output') ? ' class="active"' : '' }}>
                             <a href="{{ URL::route('output') }}">Output</a>
-                            @endif
                         </li>
-                        <li>
-                            @if (isset($active_page) && $active_page == 'services')
-                            Services
-                            @else
+                        <li{{ (isset($active_page) && $active_page == 'services') ? ' class="active"' : '' }}>
                             <a href="{{ URL::route('services') }}">Services</a>
-                            @endif
                         </li>
-                        <li>
-                            @if (isset($active_page) && $active_page == 'about')
-                            About
-                            @else
+                        <li{{ (isset($active_page) && $active_page == 'about') ? ' class="active"' : '' }}>
                             <a href="{{ URL::route('about') }}">About</a>
-                            @endif
                         </li>
                     </ul>
                 </div>
@@ -61,12 +49,8 @@
 
                 <div class="right hidden-phone">
                     <ul>
-                        <li>
-                            @if (isset($active_page) && $active_page == 'contact')
-                            Get In Touch
-                            @else
+                        <li{{ (isset($active_page) && $active_page == 'contact') ? ' class="active"' : '' }}>
                             <a href="{{ URL::route('contact') }}">Get In Touch</a>
-                            @endif
                         </li>
                     </li>
                 </div>
@@ -77,7 +61,8 @@
             @yield('content')
         </div>
 
-        <footer>
+        <footer id="footer" class="closed">
+            <i class="icon-menu" onclick="$('#footer').removeClass('closed');"></i>
         </footer>
 
         {{ HTML::script('js/vendor/jquery-1.9.1.min.js') }}

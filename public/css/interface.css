@@ -9,13 +9,13 @@ html, body {
     height: 100%;
     background: #505050;
     background: #EAEBEC;
-    font: 100 16px Exo;
+    font: 200 16px Exo;
     line-height: 1.125em; /* 18px / 16px */
     line-height: 20px; /* 18px / 16px */
     color: #ccb697;
     color: #333;
     margin: 0px;
-    padding: 0px;    
+    padding: 0px;
 }
 
 .site-width {
@@ -36,8 +36,9 @@ html, body {
     padding: 0.2857142857em 0; /* 12px / 42px */
     margin-bottom: 0.2380952381em; /* 10px / 42px */
 }
-    body.contact .hero,
-    body.about .hero
+    body.output .hero,
+    body.about .hero,
+    body.contact .hero
     {
         background: #ff9900;
         color: #fff;
@@ -50,10 +51,9 @@ h2 {
 }
 
 header[role="branding"] {
-    outline: solid 1px #c00;
-        border-bottom: solid 0.5em #6d6e71; /* 10px / 16px */
-        padding-bottom: 0.5em; /* 8px / 16px */
-        background: #505050;
+    border-bottom: solid 0.5em #6d6e71; /* 10px / 16px */
+    padding-bottom: 0.5em; /* 8px / 16px */
+    background: #505050;
 }
     header[role="branding"] .left {
         position: absolute;
@@ -62,7 +62,7 @@ header[role="branding"] {
     }
 
     header[role="branding"] .middle {
-        font: 300 40px "Nova Square";
+        font: 300 2.5em "Nova Square"; /* 40px / 16px */
         width: 6.25em; /* 250px / 40px */
         height: 1.05em; /* 42px / 40px */
         overflow: hidden;
@@ -91,6 +91,9 @@ header[role="branding"] {
             /*-webkit-box-shadow: 0px 0px 0.025em 0.025em #945d0d; /* 1px / 40px */
             /*box-shadow:         0px 0px 0.025em 0.025em #945d0d; /* 1px / 40px */
         }
+        header[role="branding"] .middle a {
+            outline: solid 1px transparent;
+        }
 
     header[role="branding"] .right {
         position: absolute;
@@ -102,12 +105,29 @@ header[role="branding"] {
         padding: 0px;
         margin: 0px;
         list-style: none;
+        height: 2.5em; /* 40px / 16px */
+        top: 1.25em; /* 20px / 16px */
+        position: relative;
     }
         header[role="branding"] li {
             float: left;
             margin-right: 1.6666666667em; /* 30px / 18px */
             color: #fff;
+            height: 100%;
+            transition: all 0.3s ease;
         }
+        header[role="branding"] li:hover, header[role="branding"] li.active {
+            color: #fff;
+            border-bottom: solid 0.5em #0091FF; /* 10px / 16px */
+        }
+            header[role="branding"] li a {
+                color: #0091FF;
+            }
+            header[role="branding"] li:hover a, header[role="branding"] li.active a {
+                text-decoration: none;
+                color: #fff;
+                transition: all 0.3s ease;
+            }
             header[role="branding"] li:last-of-type {
                 margin-right: 0px;
             }
@@ -164,7 +184,7 @@ footer {
 }
 
 /*************[ Styling - Output ]**********************************************/
-.output {
+.xoutput {
     position: relative;
     width: 55.75em; /* 892px / 16px */
     min-height: 20.25em; /* 324px / 16px */
@@ -172,38 +192,31 @@ footer {
     overflow: auto;
     text-align: center;
 }
-    .output .hover {
+    .xoutput .hover {
         height: 19em;
         margin-top: 0.625em; /* 10px / 16px */
         margin-bottom: 1.25em; /* 20px / 16px */
         background-color: none;
         border: solid 1px transparent;
     }
-    .output:hover .hover {
+    .xoutput:hover .hover {
         position: relative;
         background-color: #382b24;
         border: solid 1px #945d0d;
     }
-    .output .img {
+    .xoutput .img {
         position: absolute;
         width: 55.75em; /* 892px / 16px */
         height: 20.25em; /* 324 / 16px */
         top: 0em;
         left: 0em;
     }
-        .output .img.vividvoice {
+        .xoutput .img.vividvoice {
             background-image: url(../img/output/output_vividvoice.png);
         }
 
     .output h2 {
         display: inline-block;
-    }
-    .output a:link, .output a:visited, .output a:active {
-        color: #945d0d;
-        text-decoration: none;
-    }
-    .output a:hover {
-        color: #fff;
     }
 
 /*************[ Styling - Contact ]*********************************************/
@@ -212,3 +225,89 @@ footer {
   transition: opacity 0.5s 0.5s ease; 
   opacity: 0;
 }
+
+.artbox-wrapper {
+    -webkit-transform: rotate(45deg);
+    -webkit-backface-visibility: hidden;
+    /* needed?
+    transform: translade3d(0,0,0);
+    */
+    /*padding: 100px;*/
+    display: inline-block;
+    overflow: auto;
+    top: 100px;
+    position: relative;
+}
+.artbox-wrapper:before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: url('http://placekitten.com/500/500');
+    -webkit-transform: rotate(-45deg);
+}
+
+
+.arf {
+    width: 500px;
+    height: 500px;
+    border: solid 1px #c00;
+    background: #c00;
+}
+
+.artbox-wrapper .box {
+    position: relative;
+    float: left;
+}
+.artbox-wrapper .container {
+    float: left;
+}
+.filler {
+    background: #00c;
+}
+.clear-left {
+    clear: left;
+}
+.space {
+    margin: 20px;
+}
+    .artbox-wrapper .big {
+        width: 100px;
+        height: 100px;
+    }
+    .artbox-wrapper .small {
+        width: 50px;
+        height: 50px;
+    }
+    .artbox-wrapper .skinny {
+        width: 50px !important;
+    }
+
+    .artbox-wrapper .b-top {
+        border-top: solid 3px #c00;
+    }
+    .artbox-wrapper .b-bottom {
+        border-bottom: solid 3px #c00;
+    }
+    .artbox-wrapper .b-left {
+        border-left: solid 3px #c00;
+    }
+    .artbox-wrapper .b-right {
+        border-right: solid 3px #c00;
+    }
+
+    /*
+    .artbox-wrapper .box:nth-of-type(3) {
+        margin-top:50px;
+    }
+    .artbox-wrapper .box:nth-of-type(5) {
+        clear: left;
+    }
+    .artbox-wrapper .box:nth-of-type(8) {
+        clear: left;
+        margin-left: 50px;
+    }
+    */
+
