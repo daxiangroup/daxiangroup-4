@@ -1,61 +1,55 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!doctype html>
+<html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Daxian Group - Flatter</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        {{ HTML::style('css/bootstrap.min.css') }}
-        {{ HTML::style('css/bootstrap-responsive.min.css') }}
-        {{ HTML::style('css/main.css') }}
+        {{ HTML::style('css/foundation.css') }}
         {{ HTML::style('css/dg.css') }}
         {{ HTML::style('css/NovaSquare.font.css') }}
         {{ HTML::style('css/Exo.font.css') }}
         {{ HTML::style('css/fontello.css') }}
-        {{ HTML::script('js/vendor/modernizr-2.6.2.min.js') }}
+        {{ HTML::script('js/vendor/modernizr.js') }}
     </head>
     <body class="{{ Request::path() }}">
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-        <header role="branding">
-            <div class="site-width container">
-                <div class="left hidden-phone">
-                    <ul>
-                        <li{{ (isset($active_page) && $active_page == 'output') ? ' class="active"' : '' }}>
-                            <a href="{{ URL::route('output') }}">Output</a>
+        <div role="branding">
+            
+                <div class="row">
+                    <div class="columns large-4 show-for-medium-up">
+                        <ul>
+                            <li{{ (isset($active_page) && $active_page == 'output') ? ' class="active"' : '' }}>
+                                <a href="{{ URL::route('output') }}">Output</a>
+                            </li>
+                            <li{{ (isset($active_page) && $active_page == 'services') ? ' class="active"' : '' }}>
+                                <a href="{{ URL::route('services') }}">Services</a>
+                            </li>
+                            <li{{ (isset($active_page) && $active_page == 'about') ? ' class="active"' : '' }}>
+                                <a href="{{ URL::route('about') }}">About</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="columns large-4 middle">
+                        <a href="{{ URL::route('home') }}">
+                            <div class="words">daxian</div><div class="divider"></div><div class="words">group</div>
+                        </a>
+                    </div>
+
+                    <div class="columns large-4 text-right show-for-medium-up">
+                        <ul>
+                            <li{{ (isset($active_page) && $active_page == 'contact') ? ' class="active"' : '' }}>
+                                <a href="{{ URL::route('contact') }}">Get In Touch</a>
+                            </li>
                         </li>
-                        <li{{ (isset($active_page) && $active_page == 'services') ? ' class="active"' : '' }}>
-                            <a href="{{ URL::route('services') }}">Services</a>
-                        </li>
-                        <li{{ (isset($active_page) && $active_page == 'about') ? ' class="active"' : '' }}>
-                            <a href="{{ URL::route('about') }}">About</a>
-                        </li>
-                    </ul>
+                    </div>
                 </div>
 
-                <div class="middle">
-                    <a href="{{ URL::route('home') }}">
-                        <div class="words">daxian</div><div class="divider"></div><div class="words">group</div>
-                    </a>
-                </div>
-
-                <div class="right hidden-phone">
-                    <ul>
-                        <li{{ (isset($active_page) && $active_page == 'contact') ? ' class="active"' : '' }}>
-                            <a href="{{ URL::route('contact') }}">Get In Touch</a>
-                        </li>
-                    </li>
-                </div>
-            </div>
-        </header>
+        </div>
 
         <div role="main">
             @yield('content')
