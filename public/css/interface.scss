@@ -1,6 +1,10 @@
-$color-orange:      #ff9900;
-$color-light-blue:  #0091FF;
-$color-white:       #ffffff;
+$color-orange:          #ff9900;
+$color-light-blue:      #0091FF;
+$color-white:           #ffffff;
+$color-gray:            #505050;
+$color-light-gray:      #6d6e71;
+$color-lighter-gray:    #d8d8d8;
+$color-dark-gray:       #282828;
 
 $font-header:       "Nova Square";
 $font-section:      "Exo";
@@ -47,22 +51,30 @@ html, body {
     padding: .75rem 0;
     /* 10px */
     margin-bottom: .625rem;
+    border-bottom: solid 1px $color-lighter-gray;
 }
     body.output .hero,
     body.about .hero,
     body.contact .hero
     {
         background: $color-orange;
-        color: #fff;
+        color: $color-white;
     }
 
 h2 {
-    font-family: $font-header;
+    font-family: $font-section;
     color: $color-orange;
     /* 26px */
     margin: 0 0 1.625rem 0;
 }
 
+.panel {
+    border-color: $color-lighter-gray;
+
+    &.white {
+        background-color: $color-white;
+    }
+}
 div[role="branding"] {
     /* 8px */
     border-bottom: solid 0.5rem #6d6e71;
@@ -134,7 +146,7 @@ div[role="branding"] {
             }
 
             &:hover, &.active {
-                color: #fff;
+                color: $color-white;
                 border-bottom: solid 0.5rem $color-light-blue; /* 10px / 16px */
 
                 a {
@@ -157,13 +169,12 @@ footer[role="main"] {
     overflow: auto;
     width: 100%;
     /* 200px */
-    background: #454545;
-    border-top: solid 1px #945d0d;
-    color: #fff;
+    background: $color-gray;
+    color: $color-white;
     font-size: 14px;
 
     .tidbit {
-        background-color: #282828;
+        background-color: $color-dark-gray;
         padding: 3rem;
         text-align: center;
         font-size: 1.125rem;
@@ -174,7 +185,7 @@ footer[role="main"] {
     }
 
     a {
-        color: #fff;
+        color: $color-white;
 
         &:hover {
             color: $color-light-blue;
@@ -189,11 +200,6 @@ footer[role="main"] {
 
         span {
             margin-left: 1.875rem; /* 30px */
-
-            &:hover {
-                margin-left: 1.75rem;
-                padding-right: .125rem;
-            }
         }
     }
 

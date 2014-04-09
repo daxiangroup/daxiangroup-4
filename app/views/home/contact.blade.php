@@ -10,8 +10,8 @@
     {{ Form::open(array('route'=>'contact.submit', 'class'=>'contact-frm')) }}
     {{ Form::token() }}
 
-    <div class="row-fluid site-width">
-        <div class="span8">
+    <div class="row">
+        <div class="columns large-7">
 
             <div class="row-fluid">
                 <div class="span12">
@@ -45,9 +45,10 @@
             </div>
 
         </div>
-        <div class="span4">
 
-            <div class="row-fluid">
+        <div class="columns large-5">
+
+            <div class="panel white">
                 <h2>Our 20</h2>
                 info side
             </div>

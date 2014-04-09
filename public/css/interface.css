@@ -37,19 +37,25 @@ html, body {
   /* 12px */
   padding: .75rem 0;
   /* 10px */
-  margin-bottom: .625rem; }
+  margin-bottom: .625rem;
+  border-bottom: solid 1px #d8d8d8; }
 
 body.output .hero,
 body.about .hero,
 body.contact .hero {
   background: #ff9900;
-  color: #fff; }
+  color: white; }
 
 h2 {
-  font-family: "Nova Square";
+  font-family: "Exo";
   color: #ff9900;
   /* 26px */
   margin: 0 0 1.625rem 0; }
+
+.panel {
+  border-color: #d8d8d8; }
+  .panel.white {
+    background-color: white; }
 
 div[role="branding"] {
   /* 8px */
@@ -114,7 +120,7 @@ div[role="branding"] {
       div[role="branding"] ul li a {
         color: #0091ff; }
       div[role="branding"] ul li:hover, div[role="branding"] ul li.active {
-        color: #fff;
+        color: white;
         border-bottom: solid 0.5rem #0091ff;
         /* 10px / 16px */ }
         div[role="branding"] ul li:hover a, div[role="branding"] ul li.active a {
@@ -132,9 +138,8 @@ footer[role="main"] {
   overflow: auto;
   width: 100%;
   /* 200px */
-  background: #454545;
-  border-top: solid 1px #945d0d;
-  color: #fff;
+  background: #505050;
+  color: white;
   font-size: 14px; }
   footer[role="main"] .tidbit {
     background-color: #282828;
@@ -144,7 +149,7 @@ footer[role="main"] {
     footer[role="main"] .tidbit a {
       color: #ff9900; }
   footer[role="main"] a {
-    color: #fff; }
+    color: white; }
     footer[role="main"] a:hover {
       color: #0091ff;
       text-decoration: none; }
@@ -155,9 +160,6 @@ footer[role="main"] {
     footer[role="main"] .left-side span {
       margin-left: 1.875rem;
       /* 30px */ }
-      footer[role="main"] .left-side span:hover {
-        margin-left: 1.75rem;
-        padding-right: .125rem; }
   footer[role="main"] .right-side {
     width: 50%;
     float: left;
