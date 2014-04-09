@@ -31,7 +31,7 @@
 
             <div class="row-fluid">
                 <div class="span2">{{ Form::label('frm-about', 'What\'s This About?') }}</div>
-                <div class="span10">{{ Form::select('frm-about', array(''=>'--', 'New Project'=>'A New Project', 'Update Feature'=>'Updating A Feature', 'Adding Feature'=>'Adding A New Feature', 'Praise'=>'Praise', 'Blame'=>'Blame', 'Just Saying Hello'=>'Just Saying Hello', 'Something Else'=>'Something Else')) }}</div>
+                <div class="span10">{{ Form::select('frm-about', array(''=>'--', 'New Project'=>'A New Project', 'Update Feature'=>'Updating A Feature', 'Adding Feature'=>'Adding A New Feature', 'Praise'=>'Praise', 'Blame'=>'Blame', 'Just Saying Hello'=>'Just Saying Hello', 'Feedback'=>'Feedback', 'Something Else'=>'Something Else'), $type) }}</div>
             </div>
 
             <div class="row-fluid">

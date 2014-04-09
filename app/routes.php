@@ -16,9 +16,10 @@ Route::get('/', array('as'=>'home', function()
 	return View::make('home.index');
 }));
 
-Route::get('/contact', array('as'=>'contact', function() {
+Route::get('/contact/{type?}', array('as'=>'contact', function($type = '') {
     return View::make('home.contact')
-        ->with('active_page', 'contact');
+        ->with('active_page', 'contact')
+        ->with('type', ucfirst($type));
 }));
     Route::post('/contact', array('as'=>'contact.submit', function() {
         die('submitting contact');
@@ -41,4 +42,14 @@ Route::get('/services', array('as'=>'services', function() {
 Route::get('/about', array('as'=>'about', function() {
     return View::make('home.about')
         ->with('active_page', 'about');
+}));
+
+Route::get('/terms', array('as'=>'terms', function() {
+    return View::make('home.terms')
+        ->with('active_page', 'terms');
+}));
+
+Route::get('/conditions', array('as'=>'conditions', function() {
+    return View::make('home.conditions')
+        ->with('active_page', 'conditions');
 }));

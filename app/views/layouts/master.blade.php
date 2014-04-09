@@ -61,8 +61,19 @@
             @yield('content')
         </div>
 
-        <footer id="footer" class="closed">
-            <i class="icon-menu" onclick="$('#footer').removeClass('closed');"></i>
+        <footer role="main" id="footer" class="closed">
+            <div class="tidbit">
+                We would love to hear from you, {{ HTML::linkRoute('contact', 'let us know', array('feedback')) }} how we can improve.
+            </div>
+
+            <div class="left-side">
+                <span>{{ HTML::link('terms', 'Terms') }}</span>
+                <span>{{ HTML::link('conditions', 'Conditions') }}</span>
+            </div>
+
+            <div class="right-side">
+                <span>&copy; 2014 Daxian Group</span>
+            </div>
         </footer>
 
         {{ HTML::script('js/vendor/jquery-1.9.1.min.js') }}
